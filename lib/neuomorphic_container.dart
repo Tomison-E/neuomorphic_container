@@ -14,7 +14,6 @@ class NeuomorphicContainer extends StatelessWidget {
   final BoxConstraints constraints;
   final EdgeInsetsGeometry margin;
   final Matrix4 transform;
-  final Clip clipBehavior;
   final Widget child;
   final BorderRadiusGeometry borderRadius;
   final BoxShape shape;
@@ -31,14 +30,12 @@ class NeuomorphicContainer extends StatelessWidget {
       this.shape = BoxShape.rectangle,
       this.constraints,
       this.borderRadius,
-      this.clipBehavior = Clip.none,
       this.margin,
       this.transform,
       this.border})
       : assert(margin == null || margin.isNonNegative),
         assert(padding == null || padding.isNonNegative),
         assert(constraints == null || constraints.debugAssertIsValid()),
-        assert(clipBehavior != null),
         super(key: key);
 
   @override
@@ -53,7 +50,6 @@ class NeuomorphicContainer extends StatelessWidget {
       constraints: constraints,
       margin: margin,
       transform: transform,
-      clipBehavior: clipBehavior,
       child: child,
       decoration: BoxDecoration(
           boxShadow: [

@@ -1,7 +1,6 @@
 name: neuomorphic_container
 description: A flutter widget that expresses the concept of neuomorphism in UI design.
 version: 0.0.1
-author: Esan Oluwatomisin<tomiesan@yahoo.com>
 homepage: https://github.com/Tomison-E/neuomorphic_container.git
 
 environment:
