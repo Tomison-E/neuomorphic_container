@@ -5,11 +5,13 @@ A package widget that applies the concept of Neuomorphism in software developmen
 
 ## Getting Started
 Neumorphic containers pretends to extrude from the background. It’s an elevated form created from the same element of the background. 
+
 This project works best with your application background color set to *Color.fromRGBO(239, 238, 238, 1.0))*
 The Neuomorphic Container here requires a background color of  *Color.fromRGBO(239, 238, 238, 1.0))* to display properly.
 
 ## Usage
 To use this package, just import 'package:neuomorphic_container/neuomorphic_container.dart';
+
 Explore the example directory for a sample application of this package widget
 
 ## Sample Application
