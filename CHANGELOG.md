@@ -1,3 +1,3 @@
-## [0.0.1] - TODO: Add release date.
+## [0.0.1] - 2020-01-16.
 
-* TODO: Describe initial release.
+* A flutter widget container that showcases the application of neuomorphism as a concept in UI design
