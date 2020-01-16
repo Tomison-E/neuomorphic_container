@@ -1,16 +1,17 @@
 # example
 
-A new Flutter project.
+A new Flutter project that explores the use of Neuomorphic Container as a tool of design.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project works best with your application background color set to *Color.fromRGBO(239, 238, 238, 1.0))*
+The Neuomorphic Container here requires a background color of  *Color.fromRGBO(239, 238, 238, 1.0))* to display properly.
 
-A few resources to get you started if this is your first Flutter project:
+## Sample Application
+![ios](assets/images/screenshots/ios.png)
+![android](assets/images/screenshots/android.png)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
+For help getting started with Flutter, check out
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
