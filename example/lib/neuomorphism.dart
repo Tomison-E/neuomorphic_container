@@ -5,59 +5,221 @@ import 'package:example/utils/uiData.dart';
 import 'package:neuomorphic_container/neuomorphic_container.dart';
 
 class Neuomorphism extends StatelessWidget {
+  //PressedContainer Sample
+  final pressedContainer = NeuomorphicContainer(
+    child: Column(children: <Widget>[
+      Row(
+        children: <Widget>[
+          Text("   ${UIData.bankName}",
+              style: TextStyle(
+                  color: Colors.black87,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20.0,
+                  fontStyle: FontStyle.italic)),
+          Image.asset(
+            "assets/images/chip.png",
+          ),
+        ],
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+      ),
+      Row(
+        children: <Widget>[
+          Text("      5303   6084\n      2402   3649",
+              style: TextStyle(
+                  color: Colors.black87, fontWeight: FontWeight.bold)),
+        ],
+        mainAxisAlignment: MainAxisAlignment.start,
+      ),
+      SizedBox(height: SizeConfig.blockSizeVertical * 2),
+      Expanded(
+          child: Image.asset("assets/images/ce.png",
+              fit: BoxFit.cover,
+              width: SizeConfig.blockSizeHorizontal * 40,
+              height: SizeConfig.blockSizeVertical * 40)),
+      Expanded(
+          child: Align(
+              child: Row(children: [
+                Text("   ESAN \n   TOMISIN      \n",
+                    style: TextStyle(
+                        color: Colors.black87, fontWeight: FontWeight.bold)),
+                Text("09/24    \n",
+                    style: TextStyle(
+                        color: Colors.black87, fontWeight: FontWeight.bold))
+              ], mainAxisAlignment: MainAxisAlignment.spaceAround),
+              alignment: Alignment.bottomRight))
+    ]),
+    width: SizeConfig.blockSizeHorizontal * 53.33,
+    height: SizeConfig.blockSizeVertical * 37,
+    borderRadius: BorderRadius.circular(15.0),
+    color: Color.fromRGBO(239, 238, 238, 1.0),
+    style: NeuomorphicStyle.Pressed,
+    intensity: 0.2,
+    offset: Offset(10, 10),
+    blur: 7,
+  );
+
+// convex container sample
+  final convexContainer = NeuomorphicContainer(
+    child: Column(children: <Widget>[
+      Row(
+        children: <Widget>[
+          Text("   ${UIData.bankName}",
+              style: TextStyle(
+                  color: Colors.black87,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20.0,
+                  fontStyle: FontStyle.italic)),
+          Image.asset(
+            "assets/images/chip.png",
+          ),
+        ],
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+      ),
+      Row(
+        children: <Widget>[
+          Text("      5303   6084\n      2402   3649",
+              style: TextStyle(
+                  color: Colors.black87, fontWeight: FontWeight.bold)),
+        ],
+        mainAxisAlignment: MainAxisAlignment.start,
+      ),
+      SizedBox(height: SizeConfig.blockSizeVertical * 2),
+      Expanded(
+          child: Image.asset("assets/images/ce.png",
+              fit: BoxFit.cover,
+              width: SizeConfig.blockSizeHorizontal * 40,
+              height: SizeConfig.blockSizeVertical * 40)),
+      Expanded(
+          child: Align(
+              child: Row(children: [
+                Text("   ESAN \n   TOMISIN      \n",
+                    style: TextStyle(
+                        color: Colors.black87, fontWeight: FontWeight.bold)),
+                Text("09/24    \n",
+                    style: TextStyle(
+                        color: Colors.black87, fontWeight: FontWeight.bold))
+              ], mainAxisAlignment: MainAxisAlignment.spaceAround),
+              alignment: Alignment.bottomRight))
+    ]),
+    width: SizeConfig.blockSizeHorizontal * 53.33,
+    height: SizeConfig.blockSizeVertical * 37,
+    borderRadius: BorderRadius.circular(15.0),
+    color: Color.fromRGBO(239, 238, 238, 1.0),
+    style: NeuomorphicStyle.Convex,
+    intensity: 0.35,
+    offset: Offset(15, 15),
+    blur: 30,
+  );
+
+  //concave container sample
+  final concaveContainer = NeuomorphicContainer(
+    child: Column(children: <Widget>[
+      Row(
+        children: <Widget>[
+          Text("   ${UIData.bankName}",
+              style: TextStyle(
+                  color: Colors.black87,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20.0,
+                  fontStyle: FontStyle.italic)),
+          Image.asset(
+            "assets/images/chip.png",
+          ),
+        ],
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+      ),
+      Row(
+        children: <Widget>[
+          Text("      5303   6084\n      2402   3649",
+              style: TextStyle(
+                  color: Colors.black87, fontWeight: FontWeight.bold)),
+        ],
+        mainAxisAlignment: MainAxisAlignment.start,
+      ),
+      SizedBox(height: SizeConfig.blockSizeVertical * 2),
+      Expanded(
+          child: Image.asset("assets/images/ce.png",
+              fit: BoxFit.cover,
+              width: SizeConfig.blockSizeHorizontal * 40,
+              height: SizeConfig.blockSizeVertical * 40)),
+      Expanded(
+          child: Align(
+              child: Row(children: [
+                Text("   ESAN \n   TOMISIN      \n",
+                    style: TextStyle(
+                        color: Colors.black87, fontWeight: FontWeight.bold)),
+                Text("09/24    \n",
+                    style: TextStyle(
+                        color: Colors.black87, fontWeight: FontWeight.bold))
+              ], mainAxisAlignment: MainAxisAlignment.spaceAround),
+              alignment: Alignment.bottomRight))
+    ]),
+    width: SizeConfig.blockSizeHorizontal * 53.33,
+    height: SizeConfig.blockSizeVertical * 37,
+    borderRadius: BorderRadius.circular(15.0),
+    color: Color.fromRGBO(239, 238, 238, 1.0),
+    style: NeuomorphicStyle.Concave,
+    intensity: 0.35,
+    offset: Offset(15, 15),
+    blur: 30,
+  );
+
+  // flat Container Sample
+  final flatContainer = NeuomorphicContainer(
+    child: Column(children: <Widget>[
+      Row(
+        children: <Widget>[
+          Text("   ${UIData.bankName}",
+              style: TextStyle(
+                  color: Colors.black87,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20.0,
+                  fontStyle: FontStyle.italic)),
+          Image.asset(
+            "assets/images/chip.png",
+          ),
+        ],
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+      ),
+      Row(
+        children: <Widget>[
+          Text("      5303   6084\n      2402   3649",
+              style: TextStyle(
+                  color: Colors.black87, fontWeight: FontWeight.bold)),
+        ],
+        mainAxisAlignment: MainAxisAlignment.start,
+      ),
+      SizedBox(height: SizeConfig.blockSizeVertical * 2),
+      Expanded(
+          child: Image.asset("assets/images/ce.png",
+              fit: BoxFit.cover,
+              width: SizeConfig.blockSizeHorizontal * 40,
+              height: SizeConfig.blockSizeVertical * 40)),
+      Expanded(
+          child: Align(
+              child: Row(children: [
+                Text("   ESAN \n   TOMISIN      \n",
+                    style: TextStyle(
+                        color: Colors.black87, fontWeight: FontWeight.bold)),
+                Text("09/24    \n",
+                    style: TextStyle(
+                        color: Colors.black87, fontWeight: FontWeight.bold))
+              ], mainAxisAlignment: MainAxisAlignment.spaceAround),
+              alignment: Alignment.bottomRight))
+    ]),
+    width: SizeConfig.blockSizeHorizontal * 53.33,
+    height: SizeConfig.blockSizeVertical * 37,
+    borderRadius: BorderRadius.circular(15.0),
+    color: Color.fromRGBO(239, 238, 238, 1.0),
+    style: NeuomorphicStyle.Flat,
+    intensity: 0.2,
+    offset: Offset(15, 15),
+    blur: 30,
+  );
+
+  //build with these container samples
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
-    final container = NeuomorphicContainer(
-      child: Column(
-        children: <Widget>[
-          Row(
-            children: <Widget>[
-              Text("   ${UIData.bankName}",
-                  style: TextStyle(
-                      color: Colors.black87,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20.0,
-                      fontStyle: FontStyle.italic)),
-              Image.asset(
-                "assets/images/chip.png",
-              ),
-            ],
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-          ),
-          Row(
-            children: <Widget>[
-              Text("      5303   6084\n      2402   3649",
-                  style: TextStyle(
-                      color: Colors.black87, fontWeight: FontWeight.bold)),
-            ],
-            mainAxisAlignment: MainAxisAlignment.start,
-          ),
-          SizedBox(height: SizeConfig.blockSizeVertical * 2),
-          Expanded(
-              child: Image.asset(
-            "assets/images/ce.png",
-            fit: BoxFit.cover,
-            width: SizeConfig.blockSizeHorizontal * 40,height:SizeConfig.blockSizeVertical*40
-          )),
-          Expanded(
-              child: Align(
-                  child: Row(children: [
-                    Text("   ESAN \n   TOMISIN      \n",
-                        style: TextStyle(
-                            color: Colors.black87,
-                            fontWeight: FontWeight.bold)),
-                    Text("09/24    \n",
-                        style: TextStyle(
-                            color: Colors.black87, fontWeight: FontWeight.bold))
-                  ], mainAxisAlignment: MainAxisAlignment.spaceAround),
-                  alignment: Alignment.bottomRight))
-        ],
-      ),
-      width: SizeConfig.blockSizeHorizontal * 53.33,
-      height: SizeConfig.blockSizeVertical * 37,
-      borderRadius: BorderRadius.circular(15.0),
-    );
     return Scaffold(
         body: Column(
           children: <Widget>[
@@ -131,24 +293,35 @@ class Neuomorphism extends StatelessWidget {
                                         fontWeight: FontWeight.bold)),
                                 SizedBox(width: 10.0),
                                 NeuomorphicContainer(
-                                    shape: BoxShape.circle,
-                                    child: Padding(
-                                      padding: EdgeInsets.all(3.0),
-                                      child: Icon(Icons.navigate_next,
-                                          color: Colors.blueGrey, size: 30.0),
-                                    ))
+                                  shape: BoxShape.circle,
+                                  child: Padding(
+                                    padding: EdgeInsets.all(3.0),
+                                    child: Icon(Icons.navigate_next,
+                                        color: Colors.blueGrey, size: 30.0),
+                                  ),
+                                  color: Color.fromRGBO(239, 238, 238, 1.0),
+                                  style: NeuomorphicStyle.Flat,
+                                  intensity: 0.15,
+                                  offset: Offset(15.0, 15.0),
+                                  blur: 30,
+                                )
                               ],
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                             ),
-                            margin: EdgeInsets.all(20.0),
+                            margin: EdgeInsets.all(10.0),
                             height: SizeConfig.blockSizeVertical * 6.12,
-                            borderRadius: BorderRadius.circular(10.0)),
+                            borderRadius: BorderRadius.circular(10.0),
+                            color: Color.fromRGBO(239, 238, 238, 1.0),
+                            style: NeuomorphicStyle.Flat,
+                            intensity: 0.15,
+                            offset: Offset(5.0, 5.0),
+                            blur: 15),
                       ],
                     ),
                   ],
                 ),
                 flex: 2),
-            Flexible(child: container, flex: 5),
+            Flexible(child: concaveContainer, flex: 5, fit: FlexFit.loose),
             Flexible(
                 child: NeuomorphicContainer(
                     child: Container(
@@ -193,40 +366,67 @@ class Neuomorphism extends StatelessWidget {
                     height: 100.0,
                     borderRadius: BorderRadius.circular(10.0),
                     border: Border.all(
-                        color: Color.fromRGBO(239, 238, 238, 1.0), width: 3.0)),
+                        color: Color.fromRGBO(239, 238, 238, 1.0), width: 3.0),
+                    color: Color.fromRGBO(239, 238, 238, 1.0),
+                    style: NeuomorphicStyle.Pressed,
+                    intensity: 0.2,
+                    offset: Offset(10.0, 10.0),
+                    blur: 7),
                 flex: 2),
             Flexible(
               child: Padding(
                 child: Row(
                   children: [
                     NeuomorphicContainer(
-                        child: Padding(
-                          padding: EdgeInsets.all(10.0),
-                          child: Icon(Icons.account_balance,
-                              color: Colors.blueGrey[300], size: 30.0),
-                        ),
-                        borderRadius: BorderRadius.circular(15.0)),
+                      child: Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Icon(Icons.account_balance,
+                            color: Colors.blueGrey[300], size: 30.0),
+                      ),
+                      borderRadius: BorderRadius.circular(15.0),
+                      color: Color.fromRGBO(239, 238, 238, 1.0),
+                      style: NeuomorphicStyle.Flat,
+                      intensity: 0.15,
+                      offset: Offset(15.0, 15.0),
+                      blur: 30,
+                    ),
                     NeuomorphicContainer(
-                        child: Padding(
-                          padding: EdgeInsets.all(10.0),
-                          child: Icon(Icons.home,
-                              color: Colors.blueGrey[300], size: 30.0),
-                        ),
-                        borderRadius: BorderRadius.circular(15.0)),
+                      child: Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Icon(Icons.home,
+                            color: Colors.blueGrey[300], size: 30.0),
+                      ),
+                      borderRadius: BorderRadius.circular(15.0),
+                      color: Color.fromRGBO(239, 238, 238, 1.0),
+                      style: NeuomorphicStyle.Flat,
+                      intensity: 0.15,
+                      offset: Offset(15.0, 15.0),
+                      blur: 30,
+                    ),
                     NeuomorphicContainer(
                         child: Padding(
                           padding: EdgeInsets.all(10.0),
                           child: Icon(Icons.credit_card,
                               color: Colors.blueGrey[300], size: 30.0),
                         ),
-                        borderRadius: BorderRadius.circular(15.0)),
+                        borderRadius: BorderRadius.circular(15.0),
+                        color: Color.fromRGBO(239, 238, 238, 1.0),
+                        style: NeuomorphicStyle.Flat,
+                        intensity: 0.15,
+                        offset: Offset(15.0, 15.0),
+                        blur: 30),
                     NeuomorphicContainer(
                         child: Padding(
                           padding: EdgeInsets.all(10.0),
                           child: Icon(Icons.settings,
                               color: Colors.blueGrey[300], size: 30.0),
                         ),
-                        borderRadius: BorderRadius.circular(15.0)),
+                        borderRadius: BorderRadius.circular(15.0),
+                        color: Color.fromRGBO(239, 238, 238, 1.0),
+                        style: NeuomorphicStyle.Flat,
+                        intensity: 0.15,
+                        offset: Offset(15.0, 15.0),
+                        blur: 30),
                   ],
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 ),

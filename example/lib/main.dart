@@ -1,4 +1,5 @@
 import 'package:example/neuomorphism.dart';
+import 'package:example/utils/sizeConfig.dart';
 import 'package:flutter/material.dart';
 import 'package:example/utils/uiData.dart';
 
@@ -13,8 +14,18 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Neuomorphism(),
+      home: Example(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
 
+class Example extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    SizeConfig().init(context);
+    return Scaffold(
+      body: Neuomorphism(),
+    );
+  }
+}
