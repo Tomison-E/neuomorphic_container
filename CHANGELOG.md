@@ -9,3 +9,7 @@
 ## [1.0.1] - 2020-01-16.
 
 * A flutter widget container that showcases the application of neuomorphism as a concept in UI design
+
+## [2.0.1] - 2020-03-06.
+
+* A flutter widget container that showcases the application of neuomorphism as a concept in UI design
