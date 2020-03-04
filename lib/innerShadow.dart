@@ -160,8 +160,6 @@ class RenderInnerShadow extends RenderProxyBox {
       context.canvas.restore();
       context.canvas.restore();
       context.canvas.restore();
-
-
     }
   }
 

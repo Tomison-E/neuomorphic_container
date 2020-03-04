@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:neuomorphic_container/innerShadow.dart';
 
 /// A Neuomorphic Container.
-// ignore: camel_case_types
+// ignore: camel_case_types, must_be_immutable
 class NeuomorphicContainer extends StatelessWidget {
   final Key key;
   final AlignmentGeometry alignment;
