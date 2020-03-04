@@ -1,3 +1,7 @@
+## [2.0.3] - 2020-03-06.
+
+* Making minor changes
+
 ## [2.0.2] - 2020-03-06.
 
 * Making minor changes
