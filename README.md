@@ -26,10 +26,12 @@ Explore the example directory for a sample application of this package widget.
 
 Explore the neuomorphism directory for a code generator on the usage of this package. 
 The code generator comes with an APK that can be used to test and play around with values to easily decide what fits your design purpose. You can also run the project on a connected iOS device or simulator.
-It is also available online on [Neuomorphic Container Code Generator](https://neuomorphism.firebaseapp.com)
+
 
 ## Sample Application
 ![ios](example/assets/images/screenshots/ios.png)
+
+![android](example/assets/images/screenshots/android.png)
 
 ## Sample Code Generator
 ![Neuomorphism](neuomorphism/assets/sc/IMG_7174.GIF)

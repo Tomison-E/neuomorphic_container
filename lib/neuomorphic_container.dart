@@ -92,13 +92,13 @@ class NeuomorphicContainer extends StatelessWidget {
           boxShadow: [
             BoxShadow(
                 color: Color.fromRGBO(
-                    color.red > 221
+                    color.red + (intensity * color.red) > 225
                         ? 255
                         : color.red + (intensity * color.red).round(),
-                    color.green > 221
+                    color.green + (intensity * color.green) > 225
                         ? 255
                         : color.green + (intensity * color.green).round(),
-                    color.blue > 221
+                    color.blue + (intensity * color.blue) > 225
                         ? 255
                         : color.blue + (intensity * color.blue).round(),
                     1.0),
@@ -106,7 +106,7 @@ class NeuomorphicContainer extends StatelessWidget {
                 blurRadius: blur),
             BoxShadow(
                 color: Color.fromRGBO(
-                    color.red - (intensity * color.red).round(),
+                   color.red - (intensity * color.red).round(),
                     color.green - (intensity * color.green).round(),
                     color.blue - (intensity * color.blue).round(),
                     1.0),
@@ -136,32 +136,32 @@ class NeuomorphicContainer extends StatelessWidget {
           boxShadow: [
             BoxShadow(
                 color: Color.fromRGBO(
-                    color.red > 221
+                    color.red + (intensity * color.red) > 225
                         ? 255
                         : color.red + (intensity * color.red).round(),
-                    color.green > 221
+                    color.green + (intensity * color.green) > 225
                         ? 255
                         : color.green + (intensity * color.green).round(),
-                    color.blue > 221
+                    color.blue + (intensity * color.blue) > 225
                         ? 255
                         : color.blue + (intensity * color.blue).round(),
                     1.0),
                 offset: Offset(-offset.dx, -offset.dy),
                 blurRadius: blur),
             BoxShadow(
-                color: Color.fromRGBO(
+                color:  Color.fromRGBO(
                     color.red - (intensity * color.red).round(),
                     color.green - (intensity * color.green).round(),
-                    color.blue - (intensity * color.blue).round(),
+                   color.blue - (intensity * color.blue).round(),
                     1.0),
                 offset: Offset(offset.dx, offset.dy),
                 blurRadius: blur),
           ],
           gradient: LinearGradient(colors: [
             Color.fromRGBO(
-                color.red - (0.10 * color.red).round(),
-                color.green - (0.10 * color.green).round(),
-                color.blue - (0.10 * color.blue).round(),
+          color.red - (0.10 * color.red).round(),
+          color.green - (0.10 * color.green).round(),
+          color.blue - (0.10 * color.blue).round(),
                 1.0),
             Color.fromRGBO(
                 color.red > 233 ? 255 : color.red + (0.07 * color.red).round(),
@@ -195,20 +195,20 @@ class NeuomorphicContainer extends StatelessWidget {
           boxShadow: [
             BoxShadow(
                 color: Color.fromRGBO(
-                    color.red > 221
+                    color.red + (intensity * color.red) > 225
                         ? 255
                         : color.red + (intensity * color.red).round(),
-                    color.green > 221
+                    color.green + (intensity * color.green) > 225
                         ? 255
                         : color.green + (intensity * color.green).round(),
-                    color.blue > 221
+                    color.blue + (intensity * color.blue) > 225
                         ? 255
                         : color.blue + (intensity * color.blue).round(),
                     1.0),
                 offset: Offset(-offset.dx, -offset.dy),
                 blurRadius: blur),
             BoxShadow(
-                color: Color.fromRGBO(
+                color:  Color.fromRGBO(
                     color.red - (intensity * color.red).round(),
                     color.green - (intensity * color.green).round(),
                     color.blue - (intensity * color.blue).round(),
@@ -228,7 +228,7 @@ class NeuomorphicContainer extends StatelessWidget {
                 1.0),
             Color.fromRGBO(
                 color.red - (0.10 * color.red).round(),
-                color.green - (0.10 * color.green).round(),
+                 color.green - (0.10 * color.green).round(),
                 color.blue - (0.10 * color.blue).round(),
                 1.0),
           ], begin: Alignment.topLeft, end: Alignment.bottomRight),
@@ -240,17 +240,19 @@ class NeuomorphicContainer extends StatelessWidget {
 
   Widget _pressed() {
     return InnerShadow(
-        colorA: Color.fromRGBO(
+        colorA:  Color.fromRGBO(
             color.red - (intensity * color.red).round(),
             color.green - (intensity * color.green).round(),
             color.blue - (intensity * color.blue).round(),
             1.0),
         colorB: Color.fromRGBO(
-            color.red > 221 ? 255 : color.red + (intensity * color.red).round(),
-            color.green > 221
+            color.red + (intensity * color.red) > 225
+                ? 255
+                : color.red + (intensity * color.red).round(),
+            color.green + (intensity * color.green) > 225
                 ? 255
                 : color.green + (intensity * color.green).round(),
-            color.blue > 221
+            color.blue + (intensity * color.blue) > 225
                 ? 255
                 : color.blue + (intensity * color.blue).round(),
             1.0),

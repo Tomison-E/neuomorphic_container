@@ -38,13 +38,13 @@ class _Demo extends State<Demo> with SingleTickerProviderStateMixin {
   @override
   void initState() {
     color = Color.fromRGBO(209, 238, 238, 1.0);
-    intensity = 0.2;
-    distance = 10;
+    intensity = 0.06;
+    distance = 5.0;
     radius = 0.0;
     height = 200.0;
     width = 200.0;
-    blur = 20.0;
-    style = NeuomorphicStyle.Flat;
+    blur = 3.0;
+    style = NeuomorphicStyle.Pressed;
     _tabController = TabController(vsync: this, length: 5, initialIndex: 2);
     navColors = [Colors.grey, Colors.grey, color, Colors.grey, Colors.grey];
     super.initState();
@@ -316,7 +316,7 @@ class _Demo extends State<Demo> with SingleTickerProviderStateMixin {
       RaisedButton(color: color == CupertinoColors.white ? Colors.red : color,
         focusColor: color,
         child: Text("Pressed"),
-        onPressed: ()=> style = NeuomorphicStyle.Pressed),
+        onPressed: ()=> setState(() =>style = NeuomorphicStyle.Pressed)),
       RaisedButton(color: color == CupertinoColors.white ? Colors.red : color,
         focusColor: color,
         child: Text("Convex"),
@@ -327,30 +327,26 @@ class _Demo extends State<Demo> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return new Container(
-        decoration: new BoxDecoration(
-          color: color,
+    return  Scaffold(
+      appBar: new AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
+        centerTitle: true,
+        leading: new IconButton(
+          icon: new Icon(Icons.arrow_back_ios),
+          onPressed: () {},
         ),
-        child:
-        new Scaffold(
-            backgroundColor: Colors.transparent,
-            appBar: new AppBar(
-              backgroundColor: Colors.transparent,
-              elevation: 0.0,
-              centerTitle: true,
-              leading: new IconButton(
-                icon: new Icon(Icons.arrow_back_ios),
-                onPressed: () {
-                },
-              ),
-              actions: <Widget>[
-                new IconButton(
-                  icon: new Icon(Icons.close, size: 26.0,),
-                  onPressed: () {},
-                ),
-              ],
+        actions: <Widget>[
+          new IconButton(
+            icon: new Icon(
+              Icons.close,
+              size: 26.0,
             ),
-            body:  Column(
+            onPressed: () {},
+          ),
+        ],
+      ),
+      body:Column(
                 children: [
                   Expanded(child: Center(child: NeuomorphicContainer(
                     height: height,
@@ -362,12 +358,11 @@ class _Demo extends State<Demo> with SingleTickerProviderStateMixin {
                     blur: blur,
                     style: style,
                   ))),
-                  Container(
+                Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30.0),
-                          color: CupertinoColors.black),
+                          color: CupertinoColors.white),
                       height: 300.0,
-                      alignment: Alignment.center,
                       child: Column(
                           children: [
                             SizedBox(height: 30.0),
@@ -382,8 +377,7 @@ class _Demo extends State<Demo> with SingleTickerProviderStateMixin {
                                 widgetE(),
                               ],
                             ), height: 200.0),
-                            Expanded(child: Align(
-                                alignment: Alignment.bottomCenter, child:
+                            Expanded(child:
                             Padding(padding: EdgeInsets.only(
                                 bottom: 30.0, left: 30.0, right: 30.0),
                                 child: Row(
@@ -458,13 +452,12 @@ class _Demo extends State<Demo> with SingleTickerProviderStateMixin {
                                   ],
                                   mainAxisAlignment: MainAxisAlignment
                                       .spaceBetween,
-                                ))))
+                                )))
                           ])
                   )
                 ]
-            )
+            ),backgroundColor: color,
 
-        )
     );
   }
 
