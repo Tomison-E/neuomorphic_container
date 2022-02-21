@@ -6,24 +6,24 @@ import 'package:neuomorphic_container/innerShadow.dart';
 /// A Neuomorphic Container.
 // ignore: camel_case_types, must_be_immutable
 class NeuomorphicContainer extends StatelessWidget {
-  final Key key;
-  final AlignmentGeometry alignment;
-  final EdgeInsetsGeometry padding;
-  final Decoration foregroundDecoration;
-  final double width;
-  final double height;
-  final BoxConstraints constraints;
-  final EdgeInsetsGeometry margin;
-  final Matrix4 transform;
-  final Widget child;
-  final BorderRadiusGeometry borderRadius;
+  final Key? key;
+  final AlignmentGeometry? alignment;
+  final EdgeInsetsGeometry? padding;
+  final Decoration? foregroundDecoration;
+  final double? width;
+  final double? height;
+  final BoxConstraints? constraints;
+  final EdgeInsetsGeometry? margin;
+  final Matrix4? transform;
+  final Widget? child;
+  final BorderRadiusGeometry? borderRadius;
   final BoxShape shape;
-  final BoxBorder border;
+  final BoxBorder? border;
   final Color color;
-  Offset offset;
+  Offset? offset;
   final double intensity;
-  double blur;
-  final NeuomorphicStyle style;
+  double? blur;
+  final NeuomorphicStyle? style;
 
   NeuomorphicContainer(
       {this.key,
@@ -53,10 +53,10 @@ class NeuomorphicContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (height != null && width != null && offset == null) {
-      offset = Offset(width / 10, height / 10);
+      offset = Offset(width! / 10, height! / 10);
     }
     offset = offset == null ? Offset(20.0, 20.0) : offset;
-    blur = blur == null ? offset.dx + offset.dy : blur;
+    blur = blur == null ? offset!.dx + offset!.dy : blur;
 
     switch (style) {
       case NeuomorphicStyle.Flat:
@@ -102,16 +102,16 @@ class NeuomorphicContainer extends StatelessWidget {
                         ? 255
                         : color.blue + (intensity * color.blue).round(),
                     1.0),
-                offset: Offset(-offset.dx, -offset.dy),
-                blurRadius: blur),
+                offset: Offset(-offset!.dx, -offset!.dy),
+                blurRadius: blur!),
             BoxShadow(
                 color: Color.fromRGBO(
                     color.red - (intensity * color.red).round(),
                     color.green - (intensity * color.green).round(),
                     color.blue - (intensity * color.blue).round(),
                     1.0),
-                offset: Offset(offset.dx, offset.dy),
-                blurRadius: blur),
+                offset: Offset(offset!.dx, offset!.dy),
+                blurRadius: blur!),
           ],
           color: color,
           borderRadius: borderRadius,
@@ -146,16 +146,16 @@ class NeuomorphicContainer extends StatelessWidget {
                         ? 255
                         : color.blue + (intensity * color.blue).round(),
                     1.0),
-                offset: Offset(-offset.dx, -offset.dy),
-                blurRadius: blur),
+                offset: Offset(-offset!.dx, -offset!.dy),
+                blurRadius: blur!),
             BoxShadow(
                 color: Color.fromRGBO(
                     color.red - (intensity * color.red).round(),
                     color.green - (intensity * color.green).round(),
                     color.blue - (intensity * color.blue).round(),
                     1.0),
-                offset: Offset(offset.dx, offset.dy),
-                blurRadius: blur),
+                offset: Offset(offset!.dx, offset!.dy),
+                blurRadius: blur!),
           ],
           gradient: LinearGradient(colors: [
             Color.fromRGBO(
@@ -205,16 +205,16 @@ class NeuomorphicContainer extends StatelessWidget {
                         ? 255
                         : color.blue + (intensity * color.blue).round(),
                     1.0),
-                offset: Offset(-offset.dx, -offset.dy),
-                blurRadius: blur),
+                offset: Offset(-offset!.dx, -offset!.dy),
+                blurRadius: blur!),
             BoxShadow(
                 color: Color.fromRGBO(
                     color.red - (intensity * color.red).round(),
                     color.green - (intensity * color.green).round(),
                     color.blue - (intensity * color.blue).round(),
                     1.0),
-                offset: Offset(offset.dx, offset.dy),
-                blurRadius: blur),
+                offset: Offset(offset!.dx, offset!.dy),
+                blurRadius: blur!),
           ],
           gradient: LinearGradient(colors: [
             Color.fromRGBO(
@@ -256,7 +256,7 @@ class NeuomorphicContainer extends StatelessWidget {
                 ? 255
                 : color.blue + (intensity * color.blue).round(),
             1.0),
-        offsetA: Offset(offset.dx, offset.dx),
+        offsetA: Offset(offset!.dx, offset!.dx),
         offsetB: Offset(-3, -3),
         blurB: 0,
         blurA: blur,
