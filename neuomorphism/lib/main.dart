@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:neuomorphic_container/neuomorphic_container.dart';
-import 'package:neuomorphism/demo.dart';
+import 'demo.dart';
 
 void main() => runApp(MyApp());
 
